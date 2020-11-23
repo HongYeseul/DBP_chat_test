@@ -77,6 +77,8 @@ namespace DBP_chat_test
                 Console.WriteLine("Echo : " + (Data[0].Type == JTokenType.Bytes ? BitConverter.ToString(Data[0].ToObject<byte[]>()) : Data[0]));
 
                 Console.WriteLine("This is me "+Data[0]);
+
+                // Delegate 사용 -> 폼에 메시지 추가
                 setText_Control((Control)txtBoxMsg, (string)Data[0]);
 
             });
