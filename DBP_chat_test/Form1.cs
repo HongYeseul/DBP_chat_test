@@ -44,10 +44,16 @@ namespace DBP_chat_test
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-
             string line = txtUserMsg.Text.ToString();
-            
-            client.Emit("input", line);
+
+            var json = new JObject();
+            json.Add("name", "Luna");
+            json.Add("room", "1");
+            json.Add("msg", line);
+
+            Console.WriteLine(json.ToString());
+
+            client.Emit("chat message", json);
 
         }
 
@@ -72,7 +78,8 @@ namespace DBP_chat_test
                 Console.WriteLine("Disconnected!");
             });
 
-            client.On("echo", (Data) =>
+       
+            client.On("chat message", (Data) =>
             {
                 Console.WriteLine("Echo : " + (Data[0].Type == JTokenType.Bytes ? BitConverter.ToString(Data[0].ToObject<byte[]>()) : Data[0]));
 
@@ -81,11 +88,6 @@ namespace DBP_chat_test
                 // Delegate 사용 -> 폼에 메시지 추가
                 setText_Control((Control)txtBoxMsg, (string)Data[0]);
 
-            });
-
-            client.On("echo array", (Data) =>
-            {
-                Console.WriteLine("Echo1 : " + Data[0]);
             });
             
         }
