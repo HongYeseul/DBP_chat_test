@@ -31,41 +31,66 @@
             this.txtBoxMsg = new System.Windows.Forms.RichTextBox();
             this.txtUserMsg = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
+            this.txtRoomNum = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtBoxMsg
             // 
-            this.txtBoxMsg.Location = new System.Drawing.Point(12, 12);
+            this.txtBoxMsg.Location = new System.Drawing.Point(8, 29);
+            this.txtBoxMsg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBoxMsg.Name = "txtBoxMsg";
-            this.txtBoxMsg.Size = new System.Drawing.Size(619, 574);
+            this.txtBoxMsg.Size = new System.Drawing.Size(395, 308);
             this.txtBoxMsg.TabIndex = 0;
             this.txtBoxMsg.Text = "";
             // 
             // txtUserMsg
             // 
-            this.txtUserMsg.Location = new System.Drawing.Point(139, 605);
+            this.txtUserMsg.Location = new System.Drawing.Point(88, 346);
+            this.txtUserMsg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtUserMsg.Name = "txtUserMsg";
-            this.txtUserMsg.Size = new System.Drawing.Size(358, 32);
+            this.txtUserMsg.Size = new System.Drawing.Size(229, 21);
             this.txtUserMsg.TabIndex = 1;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(523, 605);
+            this.btnSend.Location = new System.Drawing.Point(333, 346);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(108, 32);
+            this.btnSend.Size = new System.Drawing.Size(69, 18);
             this.btnSend.TabIndex = 2;
             this.btnSend.Text = "보내기";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
+            // txtRoomNum
+            // 
+            this.txtRoomNum.Location = new System.Drawing.Point(333, 4);
+            this.txtRoomNum.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRoomNum.Name = "txtRoomNum";
+            this.txtRoomNum.Size = new System.Drawing.Size(70, 21);
+            this.txtRoomNum.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(283, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 12);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "방 번호";
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(663, 658);
+            this.ClientSize = new System.Drawing.Size(422, 376);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtRoomNum);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtUserMsg);
             this.Controls.Add(this.txtBoxMsg);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "TestChat";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -79,6 +104,8 @@
         private System.Windows.Forms.RichTextBox txtBoxMsg;
         private System.Windows.Forms.TextBox txtUserMsg;
         private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.TextBox txtRoomNum;
+        private System.Windows.Forms.Label label1;
     }
 }
 

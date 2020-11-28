@@ -48,7 +48,7 @@ namespace DBP_chat_test
 
             var json = new JObject();
             json.Add("name", "Luna");
-            json.Add("room", "1");
+            json.Add("room", txtRoomNum.Text);
             json.Add("msg", line);
 
             Console.WriteLine(json.ToString());
